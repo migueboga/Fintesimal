@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.fintesimal.ui.history.FirstViewModel" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background"
+        tools:context=".ui.history.FirstFragment">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/hello_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_ignacio"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginStart="@dimen/margin_20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/search_first"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/hello_first"
+                app:cardCornerRadius="@dimen/corner_radius_10"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20">
+                <EditText
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Busca una visita"
+                    android:padding="@dimen/margin_15"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/gray_text_color" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/description_first"
+                android:layout_below="@+id/search_first"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_first"
+                android:layout_below="@+id/description_first"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

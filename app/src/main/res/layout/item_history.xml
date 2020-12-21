@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginLeft="@dimen/margin_20"
+    android:layout_marginRight="@dimen/margin_20"
+    android:layout_marginTop="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_6"
+    app:cardCornerRadius="@dimen/corner_radius_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/icon_item_history"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:src="@drawable/circle"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:layout_gravity="center">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title_item_history"
+                    android:textSize="11sp"
+                    android:textColor="@color/gray_text_color"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/title_item_address"
+                    android:layout_below="@+id/title_item_history"
+                    android:fontFamily="sans-serif"
+                    android:textSize="13sp"
+                    android:textColor="@color/black_text_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/title_item_zone"
+                    android:layout_below="@+id/title_item_address"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/show_item_history"
+                android:layout_width="8dp"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:src="@drawable/ic_arrow"
+                android:layout_height="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
